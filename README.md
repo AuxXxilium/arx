@@ -30,16 +30,16 @@ Arc's logic, a small modern system underneath, and nothing to type.
 
 arx turns an x86-64 PC, mini-PC or VM into a DSM 7.4 machine. You write it to a small disk, boot from it, and do the rest in a browser.
 
-* **Setup in the browser** — Welcome → Model → Extras → Network → Build, with Back and Next, in plain words; the console shows where to point your browser
-* **Arc's logic, ported** — the kernel command line from arc's `boot.sh`, the ramdisk from `ramdisk-patch.sh` step for step, arc's addon order and defaults
-* **Hardware-aware defaults** — `virt-what` as arc uses it, disks counted by controller: vmtools on a VM, sensors and power addons on bare metal, NVMe and SMART addons where the disks call for them
-* **Arc Patch identity** — the serial and MACs arc generates for its models, one MAC per network port the machine has, never shown on screen
-* **Model picker with features** — iGPU, hybrid CPU, HBA and M.2 support per model, marked green where this computer has the hardware
-* **Tweaks** — arc's CPU, RAM, PCI/IRQ and C-State fixes, NVMe and performance options, Netfix, MSI board fix, GPU passthrough, GPU module deselection and module unloading, each as a switch
-* **Format Disks** — clear disks that held another system before installing DSM; the loader disk is never offered
-* **Starts DSM by itself** — once built, a normal boot goes straight into DSM
-* **Updates itself** — from the GitHub release, or from an update file on a machine without internet
-* **Works offline** — kernels, drivers, firmware and addons are on the loader disk; DSM's boot file is downloaded once and kept, or uploaded from another computer with the link the Build page shows
+* **Setup in the browser** — a few simple steps with Back and Next, in plain words; the screen on the machine tells you which address to open
+* **Arc at its core** — the same proven setup and build logic as the Arc Loader
+* **Picks the right add-ons for you** — recognises whether it runs in a virtual machine or on real hardware, and what disks it has, and chooses to match
+* **Ready-made identity** — serial number and network addresses are generated for your model, nothing to type in
+* **Model picker that knows your hardware** — shows what each model supports, like integrated graphics or M.2 drives, and highlights what your computer has
+* **Tweaks** — optional fixes for CPU, memory, power saving, network and graphics, each a simple on/off switch
+* **Format Disks** — wipe disks that held another system before installing DSM; the loader disk is never offered
+* **Starts DSM by itself** — once set up, switching the computer on goes straight into DSM
+* **Updates itself** — with one click, or from a downloaded file when there is no internet
+* **Works offline** — everything it needs is on the loader disk; the one file it downloads can also be fetched on another computer and uploaded
 
 ---
 
