@@ -45,14 +45,12 @@ arx turns an x86-64 PC, mini-PC or VM into a DSM 7.4 machine. You write it to a 
 
 ## 🧭 How it works
 
-```
-GRUB → arx (Buildroot, kernel 6.18) → web UI on :7080
-                                    └─ Build Loader: DSM boot files → custom kernel
-                                       → ramdisk patched → written to the loader disk
-         normal boot:  arx → kexec → DSM 7.4 (kernel 5.10.55) → DSM's own installer
-```
+1. **Write arx to a small disk** and start the computer from it.
+2. **Open the address** the screen shows in a browser on any other device.
+3. **Choose a model**, check the extras and the network, and press **Build Loader**. arx prepares everything DSM needs to start on this computer.
+4. **Press Start DSM.** DSM's own installer opens, where you install DSM as on any Synology.
 
-Two kernels, two jobs: a **modern kernel runs arx**, the **5.10.55 kernel runs DSM**. The DSM kernel is [arc-custom](https://github.com/AuxXxilium/arc-custom)'s, built with the boot-time checks compiled out, so nothing is binary-patched. DSM's identity — model, serial, MACs — goes on the kernel command line, and the `redpill` module does what the command line cannot: disks behind an HBA, bays, SMART on virtual disks.
+From then on, switching the computer on starts DSM directly. To change a setting or update arx, choose **arx config** in the boot menu.
 
 ---
 
@@ -60,12 +58,12 @@ Two kernels, two jobs: a **modern kernel runs arx**, the **5.10.55 kernel runs D
 
 | Platform | |
 | :-- | :-- |
-| `epyc7002` | **default** — Synology's generic x86 image, right for almost every self-built machine, Intel or AMD |
+| `epyc7002` | **default** — the right choice for almost every computer, Intel or AMD |
 | `geminilakenk` | |
 | `r1000nk` | |
 | `v1000nk` | |
 
-**DSM 7.4** on kernel **5.10.55** — DSM's drivers are built against that kernel and load against nothing else.
+**DSM 7.4**, with the Arc Custom Kernel for broader hardware support.
 
 Graphics, from arc-custom's kernel:
 
