@@ -2,7 +2,7 @@
 
 <img width="160" alt="arx" src="assets/logo.png">
 
-### arx — the future of arc
+### arx — the evolution of arc
 
 A DSM 7.x loader for x86-64, set up from your browser.<br>
 Arc's logic, a small modern system underneath, and nothing to type.
