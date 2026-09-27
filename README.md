@@ -111,6 +111,7 @@ Without internet, download the update zip from the [releases](https://github.com
 ### Developer
 
 - <a href="https://github.com/AuxXxilium">AuxXxilium</a>
+- <a href="https://github.com/FulcrumCode">Fulcrum</a>
 
 ### Thanks
 
