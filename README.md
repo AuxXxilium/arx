@@ -36,7 +36,8 @@ arx turns an x86-64 PC, mini-PC or VM into a DSM 7.4 machine. You write it to a 
 * **Ready-made identity** — serial number and network addresses are generated for your model, nothing to type in
 * **Model picker that knows your hardware** — shows what each model supports, like integrated graphics or M.2 drives, and highlights what your computer has
 * **Tweaks** — optional fixes for CPU, memory, power saving, network and graphics, each a simple on/off switch
-* **Format Disks** — wipe disks that held another system before installing DSM; the loader disk is never offered
+* **Network at a glance** — every connection with the address it has now; a static address for any of them in advanced mode, used by arx and DSM alike
+* **Format Disks** — wipe disks that held another system before installing DSM; the loader disk is never offered *(advanced mode)*
 * **Starts DSM by itself** — once set up, switching the computer on goes straight into DSM
 * **Updates itself** — with one click, or from a downloaded file when there is no internet
 * **Works offline** — everything it needs is on the loader disk; the one file it downloads can also be fetched on another computer and uploaded
@@ -51,6 +52,58 @@ arx turns an x86-64 PC, mini-PC or VM into a DSM 7.4 machine. You write it to a 
 4. **Press Start DSM.** DSM's own installer opens, where you install DSM as on any Synology.
 
 From then on, switching the computer on starts DSM directly. To change a setting or update arx, choose **arx config** in the boot menu.
+
+---
+
+## 🔑 Signing in
+
+The screen on the machine shows the address to open, `http://<address>:7080`. Sign in as **root** with the password **arx**.
+
+Change the password in the account menu at the top right, under **Change password**. It is the same password for the screen attached to the computer.
+
+---
+
+## 🥾 Boot menu
+
+| Entry | What it does |
+| :-- | :-- |
+| `arx dsm` | The normal start once the loader is built: starts DSM. If it can't — nothing built yet, or DSM updated itself since the last build — arx stays up and says why. |
+| `arx config` | Opens arx itself, to change settings, update or build again. |
+| `arx rebuild` | Builds the loader again, then starts DSM. Appears when Arc Control's *Restart to Rebuild Mode* asks for it. |
+| `arx config (verbose)` | `arx config` with all kernel messages, for a start that never reaches the browser page. |
+| `Reboot` / `Power off` | |
+
+---
+
+## 🌐 Network
+
+* **Network** lists every connection with the address, gateway and DNS server it has right now.
+* Every connection gets its address by DHCP. In advanced mode each one can have a **static address** instead:
+  * **Save** keeps it for the next start of arx and DSM
+  * **Apply now** also switches arx to it straight away — open the new address if the page stops answering
+* A static address belongs to the network card, not to a name like eth0, so it follows the card.
+* Connections are numbered in the order they sit in the computer, and each keeps its number in DSM: eth0 in arx is eth0 in DSM.
+* **No address at all?** The screen on the machine has a small menu: retry the network, set a static address (the same setting as in the browser), show the boot log, or reboot.
+
+---
+
+## 🛠️ Advanced mode
+
+Switch on **Advanced mode** in the account menu. It adds:
+
+* **Network** — static addresses, see above
+* **Extras** — the CPU frequency scaling governor, when the `cpufreqscaling` add-on is selected
+* **Format Disks** — wipe disks before installing DSM
+* **DSM Options** — for an installed DSM: reset a user's password, put DSM's network back to DHCP, or allow installing an older DSM
+* **Arx Options** — the access token, notifications by webhook or Discord when arx or DSM starts, and cloning the loader to another disk
+* **Update** — *Upgrade* writes the newest arx image over the whole loader disk (settings start over); *Update dependencies* fetches newer add-ons, modules, kernel and configs between arx releases
+
+---
+
+## ⏻ Power and fans
+
+* The power button, or a shutdown from your VM host, powers arx off cleanly. In DSM, the `acpid` add-on does the same; it is selected by default.
+* On real hardware with a fan arx can control, DSM's fan control is switched on. **Fan Control** under the Tweaks in Extras switches it off.
 
 ---
 
