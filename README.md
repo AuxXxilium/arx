@@ -22,7 +22,7 @@ Arc's logic, a small modern system underneath, and nothing to type.
 > * The loader is free and will stay free forever. If you paid a suspicious person for it, I can't help you — I'm not connected to them.
 
 > [!WARNING]
-> arx is young. It is developed and tested in VMware and has not yet been proven on a wide range of real hardware. Use it on a machine you can afford to reinstall, and back up anything on its disks first. I'm not liable for damage or loss of any kind.
+> arx is young. So far it has been tested on a small set of hardware and virtual machines only, so expect machines it has not met yet to turn up problems. Use it on a machine you can afford to reinstall, and back up anything on its disks first. I'm not liable for damage or loss of any kind.
 
 ---
 
