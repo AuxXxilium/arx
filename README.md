@@ -8,7 +8,7 @@ A DSM 7.x loader for x86-64, set up from your browser.<br>
 Arc's logic, a small modern system underneath, and nothing to type.
 
 <a href="https://github.com/AuxXxilium/arx/releases/latest"><img alt="Download" src="https://img.shields.io/badge/download-red?style=for-the-badge&label=latest&color=%23FF0000"></a>
-<a href="https://xpenology.tech/wiki"><img alt="Wiki" src="https://img.shields.io/badge/read_first-blue?style=for-the-badge&label=wiki&color=%230066CC"></a>
+<a href="https://xpenology.tech/documentation"><img alt="Documentation" src="https://img.shields.io/badge/read_first-blue?style=for-the-badge&label=doumentation&color=%230066CC"></a>
 <a href="https://discord.auxxxilium.tech"><img alt="Discord" src="https://img.shields.io/badge/discord-5865F2?style=for-the-badge&label=chat&color=%235865F2"></a>
 
 </div>
@@ -22,7 +22,7 @@ Arc's logic, a small modern system underneath, and nothing to type.
 > * The loader is free and will stay free forever. If you paid a suspicious person for it, I can't help you — I'm not connected to them.
 
 > [!WARNING]
-> arx is young. It is developed and tested in VMware and has not yet been proven on a wide range of real hardware. Use it on a machine you can afford to reinstall, and back up anything on its disks first. I'm not liable for damage or loss of any kind.
+> arx is young. So far it has been tested on a small set of hardware and virtual machines only, so expect machines it has not met yet to turn up problems. Use it on a machine you can afford to reinstall, and back up anything on its disks first. I'm not liable for damage or loss of any kind.
 
 ---
 
