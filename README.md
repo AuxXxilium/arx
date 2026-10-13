@@ -2,7 +2,7 @@
 
 <img width="160" alt="Arx" src="assets/logo.png">
 
-### Arx — the evolution of arc
+### Arx — the evolution of Arc
 
 A DSM 7.x loader for x86-64, set up from your browser.<br>
 Arc's logic, a small modern system underneath, and nothing to type.
@@ -138,7 +138,7 @@ Graphics, from arc-custom's kernel:
 
 ## ⬆️ Updates
 
-Arx updates itself. Under **Update**, a running loader finds the latest release, checks it against its hash and replaces its own files — as arc's updater does. Your settings, password and `p3/users` stay; build the loader again afterwards.
+Arx updates itself. Under **Update**, a running loader finds the latest release, checks it against its hash and replaces its own files — as Arc's updater does. Your settings, password and `p3/users` stay; build the loader again afterwards.
 
 Without internet, download the update zip from the [releases](https://github.com/AuxXxilium/arx/releases/latest) and give it to the same page as a file. Arx checks that it is a zip, that it holds the Arx loader, and that nothing in it lands outside the loader's partitions, before it removes anything.
 
@@ -169,7 +169,7 @@ Without internet, download the update zip from the [releases](https://github.com
 ### Thanks
 
 * **TTG** and everyone who continued the original redpill-load project, which the `redpill` module is based on
-* **pocopico, jumkey, fbelavenuto, wjz304, PeterSuh-Q3, 007revad** and others, whose code and work are part of Arx, arc and their addons
+* **pocopico, jumkey, fbelavenuto, wjz304, PeterSuh-Q3, 007revad** and others, whose code and work are part of Arx, Arc and their addons
 
 Arx builds on [Arc](https://github.com/AuxXxilium/arc) and everyone who made it what it is.
 
