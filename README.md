@@ -1,8 +1,8 @@
 <div align="center">
 
-<img width="160" alt="arx" src="assets/logo.png">
+<img width="160" alt="Arx" src="assets/logo.png">
 
-### arx — the evolution of arc
+### Arx — the evolution of arc
 
 A DSM 7.x loader for x86-64, set up from your browser.<br>
 Arc's logic, a small modern system underneath, and nothing to type.
@@ -16,19 +16,19 @@ Arc's logic, a small modern system underneath, and nothing to type.
 ---
 
 > [!IMPORTANT]
-> * arx and DSM are **independent** from each other — arx is a boot helper for DSM.
+> * Arx and DSM are **independent** from each other — Arx is a boot helper for DSM.
 > * **Commercial use is not permitted and strictly forbidden.**
-> * DSM and all parts of it are under copyright / ownership by Synology Inc. arx ships none of it.
+> * DSM and all parts of it are under copyright / ownership by Synology Inc. Arx ships none of it.
 > * The loader is free and will stay free forever. If you paid a suspicious person for it, I can't help you — I'm not connected to them.
 
 > [!WARNING]
-> arx is young. So far it has been tested on a small set of hardware and virtual machines only, so expect machines it has not met yet to turn up problems. Use it on a machine you can afford to reinstall, and back up anything on its disks first. I'm not liable for damage or loss of any kind.
+> Arx is young. So far it has been tested on a small set of hardware and virtual machines only, so expect machines it has not met yet to turn up problems. Use it on a machine you can afford to reinstall, and back up anything on its disks first. I'm not liable for damage or loss of any kind.
 
 ---
 
-## ✨ What arx does
+## ✨ What Arx does
 
-arx turns an x86-64 PC, mini-PC or VM into a DSM 7.4 machine. You write it to a small disk, boot from it, and do the rest in a browser.
+Arx turns an x86-64 PC, mini-PC or VM into a DSM 7.4 machine. You write it to a small disk, boot from it, and do the rest in a browser.
 
 * **Setup in the browser** — a few simple steps with Back and Next, in plain words; the screen on the machine tells you which address to open
 * **Arc at its core** — the same proven setup and build logic as the Arc Loader
@@ -36,7 +36,7 @@ arx turns an x86-64 PC, mini-PC or VM into a DSM 7.4 machine. You write it to a 
 * **Ready-made identity** — serial number and network addresses are generated for your model, nothing to type in
 * **Model picker that knows your hardware** — shows what each model supports, like integrated graphics or M.2 drives, and highlights what your computer has
 * **Tweaks** — optional fixes for CPU, memory, power saving, network and graphics, each a simple on/off switch
-* **Network at a glance** — every connection with the address it has now; a static address for any of them in advanced mode, used by arx and DSM alike
+* **Network at a glance** — every connection with the address it has now; a static address for any of them in advanced mode, used by Arx and DSM alike
 * **Format Disks** — wipe disks that held another system before installing DSM; the loader disk is never offered *(advanced mode)*
 * **Starts DSM by itself** — once set up, switching the computer on goes straight into DSM
 * **Updates itself** — with one click, or from a downloaded file when there is no internet
@@ -46,12 +46,12 @@ arx turns an x86-64 PC, mini-PC or VM into a DSM 7.4 machine. You write it to a 
 
 ## 🧭 How it works
 
-1. **Write arx to a small disk** and start the computer from it.
+1. **Write Arx to a small disk** and start the computer from it.
 2. **Open the address** the screen shows in a browser on any other device.
-3. **Choose a model**, check the extras and the network, and press **Build Loader**. arx prepares everything DSM needs to start on this computer.
+3. **Choose a model**, check the extras and the network, and press **Build Loader**. Arx prepares everything DSM needs to start on this computer.
 4. **Press Start DSM.** DSM's own installer opens, where you install DSM as on any Synology.
 
-From then on, switching the computer on starts DSM directly. To change a setting or update arx, choose **arx config** in the boot menu.
+From then on, switching the computer on starts DSM directly. To change a setting or update Arx, choose **Arx config** in the boot menu.
 
 ---
 
@@ -67,10 +67,10 @@ Change the password in the account menu at the top right, under **Change passwor
 
 | Entry | What it does |
 | :-- | :-- |
-| `arx dsm` | The normal start once the loader is built: starts DSM. If it can't — nothing built yet, or DSM updated itself since the last build — arx stays up and says why. |
-| `arx config` | Opens arx itself, to change settings, update or build again. |
-| `arx rebuild` | Builds the loader again, then starts DSM. Appears when Arc Control's *Restart to Rebuild Mode* asks for it. |
-| `arx config (verbose)` | `arx config` with all kernel messages, for a start that never reaches the browser page. |
+| `Arx DSM` | The normal start once the loader is built: starts DSM. If it can't — nothing built yet, or DSM updated itself since the last build — Arx stays up and says why. |
+| `Arx config` | Opens Arx itself, to change settings, update or build again. |
+| `Arx rebuild` | Builds the loader again, then starts DSM. Appears when Arc Control's *Restart to Rebuild Mode* asks for it. |
+| `Arx config (verbose)` | `Arx config` with all kernel messages, for a start that never reaches the browser page. |
 | `Reboot` / `Power off` | |
 
 ---
@@ -79,10 +79,10 @@ Change the password in the account menu at the top right, under **Change passwor
 
 * **Network** lists every connection with the address, gateway and DNS server it has right now.
 * Every connection gets its address by DHCP. In advanced mode each one can have a **static address** instead:
-  * **Save** keeps it for the next start of arx and DSM
-  * **Apply now** also switches arx to it straight away — open the new address if the page stops answering
+  * **Save** keeps it for the next start of Arx and DSM
+  * **Apply now** also switches Arx to it straight away — open the new address if the page stops answering
 * A static address belongs to the network card, not to a name like eth0, so it follows the card.
-* Connections are numbered in the order they sit in the computer, and each keeps its number in DSM: eth0 in arx is eth0 in DSM.
+* Connections are numbered in the order they sit in the computer, and each keeps its number in DSM: eth0 in Arx is eth0 in DSM.
 * **No address at all?** The screen on the machine has a small menu: retry the network, set a static address (the same setting as in the browser), show the boot log, or reboot.
 
 ---
@@ -95,15 +95,15 @@ Switch on **Advanced mode** in the account menu. It adds:
 * **Extras** — the CPU frequency scaling governor, when the `cpufreqscaling` add-on is selected
 * **Format Disks** — wipe disks before installing DSM
 * **DSM Options** — for an installed DSM: reset a user's password, put DSM's network back to DHCP, or allow installing an older DSM
-* **Arx Options** — the access token, notifications by webhook or Discord when arx or DSM starts, and cloning the loader to another disk
-* **Update** — *Upgrade* writes the newest arx image over the whole loader disk (settings start over); *Update dependencies* fetches newer add-ons, modules, kernel and configs between arx releases
+* **Arx Options** — the access token, notifications by webhook or Discord when Arx or DSM starts, and cloning the loader to another disk
+* **Update** — *Upgrade* writes the newest Arx image over the whole loader disk (settings start over); *Update dependencies* fetches newer add-ons, modules, kernel and configs between Arx releases
 
 ---
 
 ## ⏻ Power and fans
 
-* The power button, or a shutdown from your VM host, powers arx off cleanly. In DSM, the `acpid` add-on does the same; it is selected by default.
-* On real hardware with a fan arx can control, DSM's fan control is switched on. **Fan Control** under the Tweaks in Extras switches it off.
+* The power button, or a shutdown from your VM host, powers Arx off cleanly. In DSM, the `acpid` add-on does the same; it is selected by default.
+* On real hardware with a fan Arx can control, DSM's fan control is switched on. **Fan Control** under the Tweaks in Extras switches it off.
 
 ---
 
@@ -138,9 +138,9 @@ Graphics, from arc-custom's kernel:
 
 ## ⬆️ Updates
 
-arx updates itself. Under **Update**, a running loader finds the latest release, checks it against its hash and replaces its own files — as arc's updater does. Your settings, password and `p3/users` stay; build the loader again afterwards.
+Arx updates itself. Under **Update**, a running loader finds the latest release, checks it against its hash and replaces its own files — as arc's updater does. Your settings, password and `p3/users` stay; build the loader again afterwards.
 
-Without internet, download the update zip from the [releases](https://github.com/AuxXxilium/arx/releases/latest) and give it to the same page as a file. arx checks that it is a zip, that it holds the arx loader, and that nothing in it lands outside the loader's partitions, before it removes anything.
+Without internet, download the update zip from the [releases](https://github.com/AuxXxilium/arx/releases/latest) and give it to the same page as a file. Arx checks that it is a zip, that it holds the Arx loader, and that nothing in it lands outside the loader's partitions, before it removes anything.
 
 ---
 
@@ -154,7 +154,7 @@ Without internet, download the update zip from the [releases](https://github.com
 
 | Project | Description |
 | :-- | :-- |
-| [Arc Loader](https://github.com/AuxXxilium/arc) | The loader arx grew from — guided setup for many platforms and models |
+| [Arc Loader](https://github.com/AuxXxilium/arc) | The loader Arx grew from — guided setup for many platforms and models |
 | [Arc Control](https://github.com/AuxXxilium/arc-control) | DSM app for loader settings, monitoring and hardware tuning |
 | [Arc Utilities](https://github.com/AuxXxilium/arc-utils) | Tools to install, patch and activate DSM apps on Xpenology |
 | [AuxXxilium](https://github.com/AuxXxilium) | Everything else from the Arc Project |
@@ -169,9 +169,9 @@ Without internet, download the update zip from the [releases](https://github.com
 ### Thanks
 
 * **TTG** and everyone who continued the original redpill-load project, which the `redpill` module is based on
-* **pocopico, jumkey, fbelavenuto, wjz304, PeterSuh-Q3, 007revad** and others, whose code and work are part of arx, arc and their addons
+* **pocopico, jumkey, fbelavenuto, wjz304, PeterSuh-Q3, 007revad** and others, whose code and work are part of Arx, arc and their addons
 
-arx builds on [Arc](https://github.com/AuxXxilium/arc) and everyone who made it what it is.
+Arx builds on [Arc](https://github.com/AuxXxilium/arc) and everyone who made it what it is.
 
 <div align="center">
 
