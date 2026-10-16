@@ -67,7 +67,7 @@ Change the password in the account menu at the top right, under **Change passwor
 
 | Entry | What it does |
 | :-- | :-- |
-| `Arx DSM` | The normal start once the loader is built: starts DSM. If it can't — nothing built yet, or DSM updated itself since the last build — Arx stays up and says why. |
+| `Arx DSM` | The normal start once the loader is built: starts DSM. If DSM updated itself since the last build, Arx patches the update's own boot files first. If it can't start DSM, Arx stays up and says why. |
 | `Arx config` | Opens Arx itself, to change settings, update or build again. |
 | `Arx rebuild` | Builds the loader again, then starts DSM. Appears when Arc Control's *Restart to Rebuild Mode* asks for it. |
 | `Arx config (verbose)` | `Arx config` with all kernel messages, for a start that never reaches the browser page. |
@@ -139,6 +139,8 @@ Graphics, from arc-custom's kernel:
 ## ⬆️ Updates
 
 Arx updates itself. Under **Update**, a running loader finds the latest release, checks it against its hash and replaces its own files — as Arc's updater does. Your settings, password and `p3/users` stay; build the loader again afterwards.
+
+Arx installs DSM 7.4. If DSM updates itself, Arx notices on the next start, patches the update's own boot files and starts DSM. No rebuild and no network needed.
 
 Without internet, download the update zip from the [releases](https://github.com/AuxXxilium/arx/releases/latest) and give it to the same page as a file. Arx checks that it is a zip, that it holds the Arx loader, and that nothing in it lands outside the loader's partitions, before it removes anything.
 
